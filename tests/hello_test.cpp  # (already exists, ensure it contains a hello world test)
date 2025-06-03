@@ -1,0 +1,19 @@
+#include <iostream>
+#include <sstream>
+#include <cassert>
+
+void hello() {
+    std::cout << "Hello, World!" << std::endl;
+}
+
+int main() {
+    std::ostringstream buffer;
+    std::streambuf* oldCout = std::cout.rdbuf(buffer.rdbuf());
+
+    hello();
+
+    std::cout.rdbuf(oldCout);
+    assert(buffer.str() == "Hello, World!\n");
+
+    return 0;
+}

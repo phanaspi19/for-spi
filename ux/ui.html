@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សាកល្បង</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* អនុញ្ញាតឱ្យធាតុរុំនៅពេលអេក្រង់តូច */
+            background-color: #b23434; /* ពណ៌ផ្ទៃខាងក្រោយក្រហម */
+            padding: 5px;
+            border: 1px solid #000; /* ស៊ុមខ្មៅ */
+            gap: 10px; /* ចន្លោះ ១០ ភីកសែលរវាងធាតុ (នៅដាច់ៗ) */
+            font-family: "Khmer OS", "Noto Sans Khmer", sans-serif; /* ពុម្ពអក្សរខ្មែរ */
+        }
+        .flex-container div {
+            flex: 1 1 100px; /* ទទឹងអប្បបរមាសម្រាប់ស្លាក */
+            font-weight: bold;
+            color: #fff; /* អក្សរសសម្រាប់ភាពផ្ទុយ */
+            text-align: center;
+            padding: 2px;
+        }
+        .flex-container input {
+            flex: 2 1 200px; /* ទទឹងសម្រាប់ប្រអប់បញ្ចូល */
+            padding: 2px;
+            text-align: center;
+            border: 1px solid #ccc; /* ស៊ុមប្រអប់បញ្ចូល */
+        }
+        .flex-container button {
+            flex: 2 1 200px; /* ទទឹងសម្រាប់ប៊ូតុង */
+            padding: 2px;
+            text-align: center;
+            background-color: #fff; /* ផ្ទៃខាងក្រោយស */
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .flex-container button:hover {
+            background-color: #e0e0e0; /* ផ្លាស់ប្តូរពណ៌នៅពេលសំកាំង */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>កូដ</div>
+        <input type="text" name="code" id="code" placeholder="បញ្ចូលកូដ" aria-label="បញ្ចូលកូដ">
+
+        <div>ចំណងជើង</div>
+        <input type="text" name="title" id="title" placeholder="បញ្ចូលចំណងជើង" aria-label="បញ្ចូលចំណងជើង">
+
+        <div>បរិមាណ</div>
+        <input type="text" name="qty" id="qty" placeholder="បញ្ចូលបរិមាណ" aria-label="បញ្ចូលបរិមាណ">
+
+        <div>តម្លៃ</div>
+        <input type="text" name="price" id="price" placeholder="បញ្ចូលតម្លៃ" aria-label="បញ្ចូលតម្លៃ">
+
+        <div>បញ្ចុះតម្លៃ</div>
+        <input type="text" name="discount" id="discount" placeholder="បញ្ចូលបញ្ចុះតម្លៃ" aria-label="បញ្ចូលបញ្ចុះតម្លៃ">
+
+        <div>ចំនួនសរុប</div>
+        <input type="text" name="amount" id="amount" placeholder="បញ្ចូលចំនួនសរុប" aria-label="បញ្ចូលចំនួនសរុប">
+
+        <div></div> <!-- ទទេសម្រាប់តម្រឹម -->
+        <button>បន្ថែម</button>
+    </div>
+</body>
+</html>
